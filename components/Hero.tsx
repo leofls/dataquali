@@ -1,9 +1,7 @@
-"use client";
+"use client"
 
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
 import {
   Carousel,
   CarouselContent,
@@ -11,45 +9,49 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
-
 import Autoplay from "embla-carousel-autoplay";
+import heroSlide1 from "@/public/hero/hero-slide-1.jpg";
+import heroSlide2 from "@/public/hero/hero-slide-2.jpg";
+import heroSlide3 from "@/public/hero/hero-slide-3.jpg";
+import Image from "next/image";
 
 const Hero = () => {
   const slides = [
-    { src: "/hero/hero-slide-1.jpg", alt: "Equipe Dataquali colaborando" },
-    { src: "/hero/hero-slide-2.jpg", alt: "Infraestrutura Cloud" },
-    { src: "/hero/hero-slide-3.jpg", alt: "Análise de Dados" },
+    { src: heroSlide1.src, alt: "Equipe Dataquali colaborando" },
+    { src: heroSlide2.src, alt: "Infraestrutura Cloud" },
+    { src: heroSlide3.src, alt: "Análise de Dados" },
   ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Carousel */}
+      {/* Background Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
         <Carousel
-          opts={{ align: "start", loop: true }}
-          plugins={[Autoplay({ delay: 5000 })]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 5000,
+            }),
+          ]}
           className="w-full h-full"
         >
           <CarouselContent className="h-full">
             {slides.map((slide, index) => (
               <CarouselItem key={index} className="h-screen">
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  className="object-cover opacity-60"
-                  priority={index === 0}
+                <div
+                  className="h-full bg-cover bg-no-repeat bg-bottom"
+                  style={{ backgroundImage: `url(${slide.src})` }}
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
-
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
+          <CarouselPrevious className="left-4 z-10" />
+          <CarouselNext className="right-4 z-10" />
         </Carousel>
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background z-8"></div>
+        <div className="absolute z-8 inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
       </div>
 
       {/* Content */}
@@ -58,7 +60,7 @@ const Hero = () => {
           Tecnologia feita por pessoas,<br />
           <span className="gradient-text">para transformar negócios</span>
         </h1>
-
+        
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in leading-relaxed">
           Há mais de 10 anos impulsionando empresas com soluções sob medida em software, dados e cloud — com inovação, proximidade e resultados reais.
         </p>
@@ -68,11 +70,30 @@ const Hero = () => {
             Solicitar Proposta
             <ArrowRight className="ml-2" />
           </Button>
-
           <Button size="lg" variant="outline" className="text-lg px-8 border-primary text-primary hover:bg-primary hover:text-white smooth-transition">
             Falar com um Especialista
           </Button>
         </div>
+
+        {/* Stats */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-border">
+          <div className="space-y-2">
+            <p className="text-4xl md:text-5xl font-bold gradient-text">10+</p>
+            <p className="text-sm text-muted-foreground">Anos de Experiência</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-4xl md:text-5xl font-bold gradient-text">150+</p>
+            <p className="text-sm text-muted-foreground">Projetos Entregues</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-4xl md:text-5xl font-bold gradient-text">80+</p>
+            <p className="text-sm text-muted-foreground">Clientes Satisfeitos</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-4xl md:text-5xl font-bold gradient-text">50+</p>
+            <p className="text-sm text-muted-foreground">Especialistas Certificados</p>
+          </div>
+        </div> */}
       </div>
     </section>
   );
