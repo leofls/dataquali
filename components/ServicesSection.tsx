@@ -16,6 +16,20 @@ import {
 const ServicesSection = () => {
   const services = [
     {
+      icon: Briefcase,
+      title: "CTO as a Service / Squads",
+      description:
+        "Liderança tecnológica estratégica e times completos para acelerar sua transformação digital com governança.",
+      slug: "cto-as-service",
+    },
+    {
+      icon: Lightbulb,
+      title: "Transformação Digital",
+      description:
+        "Modernização de processos e sistemas, preparando sua empresa para os desafios do mercado digital.",
+      slug: "transformacao-digital",
+    },
+    {
       icon: Database,
       title: "Administração de Bancos de Dados",
       description:
@@ -50,34 +64,21 @@ const ServicesSection = () => {
         "Transforme dados em insights estratégicos com pipelines inteligentes, análises avançadas e machine learning.",
       slug: "engenharia-dados",
     },
-    {
-      icon: Users,
-      title: "Alocação de Profissionais",
-      description:
-        "Profissionais qualificados e experientes para compor seu time, com agilidade e expertise técnica comprovada.",
-      slug: "alocacao-profissionais",
-    },
-    {
-      icon: Briefcase,
-      title: "CTO as a Service / Squads",
-      description:
-        "Liderança tecnológica estratégica e times completos para acelerar sua transformação digital com governança.",
-      slug: "cto-as-service",
-    },
-    {
-      icon: Lightbulb,
-      title: "Transformação Digital",
-      description:
-        "Modernização de processos e sistemas, preparando sua empresa para os desafios do mercado digital.",
-      slug: "transformacao-digital",
-    },
-    {
-      icon: FolderKanban,
-      title: "Gerência de Projetos de TI",
-      description:
-        "Gestão ágil e eficiente de projetos tecnológicos, garantindo entregas no prazo com qualidade e transparência.",
-      slug: "gerencia-projetos",
-    },
+    // {
+    //   icon: Users,
+    //   title: "Alocação de Profissionais",
+    //   description:
+    //     "Profissionais qualificados e experientes para compor seu time, com agilidade e expertise técnica comprovada.",
+    //   slug: "alocacao-profissionais",
+    // },
+    
+    // {
+    //   icon: FolderKanban,
+    //   title: "Gerência de Projetos de TI",
+    //   description:
+    //     "Gestão ágil e eficiente de projetos tecnológicos, garantindo entregas no prazo com qualidade e transparência.",
+    //   slug: "gerencia-projetos",
+    // },
   ];
 
   return (

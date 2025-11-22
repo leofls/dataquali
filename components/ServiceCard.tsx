@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import { LucideIcon, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,7 +12,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ icon: Icon, title, description, slug }: ServiceCardProps) => {
   return (
-    <Card className="bg-card border-border hover:border-primary smooth-transition group">
+    <Card className="bg-card border-border hover:border-primary smooth-transition group h-full">
       <CardContent className="p-6 space-y-4">
         <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 smooth-transition">
           <Icon className="w-6 h-6 text-primary" />

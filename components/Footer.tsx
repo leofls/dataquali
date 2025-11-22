@@ -1,11 +1,50 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { MessageCircle, Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 const Footer = () => {
   const whatsappNumber = "5511999999999"; // Substituir com número real
+
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  useEffect(() => {
+    const updateThemeFromDoc = () => {
+      const isLight = document.documentElement.classList.contains("light");
+      setTheme(isLight ? "light" : "dark");
+    };
+
+    updateThemeFromDoc();
+
+    const observer = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        if (m.type === "attributes") updateThemeFromDoc();
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === "theme") updateThemeFromDoc();
+    };
+
+    window.addEventListener("storage", onStorage);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("storage", onStorage);
+    };
+  }, []);
+
+  const logoSrc =
+    theme === "light"
+      ? "/Dataquali_preto_Azul_sem_slogan.png"
+      : "/Dataquali_BRANCO_Azul_sem_slogan.png";
 
   return (
     <footer className="bg-card border-t border-border relative">
@@ -17,10 +56,17 @@ const Footer = () => {
             <h3 className="text-2xl font-bold gradient-text">
               <Image
                 className="w-1/2"
-                src="/Dataquali_BRANCO_Azul_sem_slogan.png"
+                src={logoSrc}
                 width={200}
                 height={80}
                 alt="Logo Dataquali"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement;
+                  img.src =
+                    theme === "light"
+                      ? "/Dataquali - Logo.png"
+                      : "/Dataquali_BRANCO_Tom_Azul.png";
+                }}
               />
             </h3>
 

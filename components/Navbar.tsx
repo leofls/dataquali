@@ -64,7 +64,19 @@ export default function Navbar() {
   ];
 
   // Função pra marcar link ativo (como era no Router)
-  const isActive = (route: string) => pathname === route;
+  const normalize = (p?: string) => {
+    if (!p) return "/";
+    if (p.endsWith("/") && p !== "/") return p.slice(0, -1);
+    return p;
+  };
+
+  const currentPath = normalize(pathname);
+
+  const isActive = (route: string) => {
+    const r = normalize(route);
+    if (r === "/") return currentPath === "/";
+    return currentPath === r || currentPath.startsWith(r + "/");
+  };
 
   return (
     <nav
