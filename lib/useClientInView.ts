@@ -3,7 +3,7 @@
 import { RefObject, useEffect, useState } from "react";
 import { useInView } from "framer-motion";
 
-export function useClientInView(ref: RefObject<Element>, options?: { once?: boolean; amount?: number }) {
+export function useClientInView(ref: RefObject<Element | null>, options?: { once?: boolean; amount?: number }) {
   // framer motion hook
   const inView = useInView(ref, options || { once: true, amount: 0.2 });
   const [visibleOnMount, setVisibleOnMount] = useState(false);
