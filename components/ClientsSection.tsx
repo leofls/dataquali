@@ -3,33 +3,53 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Handshake } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import { url } from "inspector";
 
 const ClientsSection = () => {
   const clients = [
-    { name: "TechCorp", logo: "TC" },
-    { name: "RetailMax", logo: "RM" },
-    { name: "FinanceHub", logo: "FH" },
-    { name: "DataPro", logo: "DP" },
-    { name: "CloudSys", logo: "CS" },
-    { name: "InnoTech", logo: "IT" },
-    { name: "LogiPlus", logo: "LP" },
-    { name: "SmartAI", logo: "SA" },
-    { name: "WebFlow", logo: "WF" },
-    { name: "NetCore", logo: "NC" },
-    { name: "AppDev", logo: "AD" },
-    { name: "CodeLab", logo: "CL" },
-    { name: "DataSync", logo: "DS" },
-    { name: "TechHub", logo: "TH" },
-    { name: "CloudPro", logo: "CP" },
-    { name: "DevOps", logo: "DO" },
-    { name: "SecureIT", logo: "SI" },
-    { name: "FastAPI", logo: "FA" },
-    { name: "AutoTech", logo: "AT" },
-    { name: "SysCore", logo: "SC" },
-    { name: "NetPlus", logo: "NP" },
-    { name: "CodeFlow", logo: "CF" },
-    { name: "DataHub", logo: "DH" },
-    { name: "TechPro", logo: "TP" },
+    { 
+      name: "Carajas", 
+      logo: "/clients/carajas-logo.png",
+      url: "https://www.carajas.com.br/"
+    },
+    { 
+      name: "Hospital Veredas", 
+      logo: "/clients/hospital-veredas-logo.png",
+      url: "https://www.hospitalveredas.com.br/web/"
+
+    },
+    { 
+      name: "Usina Impacto", 
+      logo: "/clients/usina-impacto-logo.png",
+      url: "https://ibea.com.br/"
+    },
+    { 
+      name: "Hospital Sanatório", 
+      logo: "/clients/hospital-sanatorio-logo.png", 
+      url: ""
+    },
+    { 
+      name: "4QEgenharia", 
+      logo: "/clients/4qengenharia-logo.png", 
+      url: "https://4qengenharia.com.br/" 
+    },
+    { 
+      name: "Itp Soluções", 
+      logo: "/clients/itp-solucoes-logo.png",
+      url: "https://itpsolucoes.com.br/"
+    },
+    { 
+      name: "Lunio", 
+      logo: "/clients/lunio-logo.png", 
+      url: "https://luniobr.com/"
+    },
+    { 
+      name: "ATM", 
+      logo: "/clients/atm-logo.png",
+      url: "https://www.atmit.com.br/"
+    },
+    
   ];
 
   return (
@@ -73,9 +93,18 @@ const ClientsSection = () => {
                 hidden: { opacity: 0, scale: 0.9 },
                 visible: { opacity: 1, scale: 1 },
               }}
+              onClick={() => {
+                if (client.url) {
+                  window.open(client.url, "_blank");
+                }
+              }}  
             >
               <span className="text-2xl font-bold text-muted-foreground group-hover:text-primary transition-colors">
-                {client.logo}
+                {typeof client.logo === "string" && client.logo.startsWith("/") ? (
+                  <Image src={client.logo} alt={client.name} width={80} height={40} />
+                ) : (
+                  client.logo
+                )}
               </span>
             </motion.div>
           ))}

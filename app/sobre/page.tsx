@@ -151,7 +151,7 @@ const AboutPage = () => {
             <h2 className="text-4xl font-bold">Nossa Cultura</h2>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Acreditamos em um ambiente de trabalho colaborativo, onde a inovação é incentivada
-              e o crescimento profissional é constante. Valorizamos a diversidade, a transparência
+              e o crescimento profissional é constante. Valorizamos a transparência
               e o equilíbrio entre vida pessoal e profissional.
             </p>
             <p className="text-xl text-muted-foreground leading-relaxed">

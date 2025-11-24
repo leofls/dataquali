@@ -1,65 +1,74 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
-import { Database, Cloud, Code, TrendingUp, Users, Briefcase, Lightbulb, FolderKanban, Server } from "lucide-react";
+import { Database, Cloud, Code, TrendingUp, Users, Briefcase, Lightbulb, FolderKanban, Server, Brain } from "lucide-react";
 
 
 const Services = () => {
   const services = [
     {
-      icon: Database,
-      title: "Administração de Bancos de Dados",
-      description: "Gestão completa e otimização de bancos de dados relacionais e NoSQL. Performance tuning, backup, recuperação de desastres e monitoramento 24/7. Garantimos disponibilidade, segurança e performance máxima para suas operações críticas.",
-      slug: "administracao-bancos-dados"
-    },
-    {
-      icon: Cloud,
-      title: "Consultoria em Cloud Computing",
-      description: "Estratégias personalizadas para aproveitamento máximo da nuvem. Análise de custos, arquitetura de soluções, governança e otimização de recursos em AWS, Azure e GCP. Reduza custos enquanto aumenta escalabilidade e confiabilidade.",
-      slug: "consultoria-cloud"
-    },
-    {
-      icon: Server,
-      title: "Migração para Nuvem",
-      description: "Migração segura e eficiente de infraestrutura on-premise para ambientes cloud. Planejamento detalhado, execução sem downtime, validação de integridade e treinamento de equipes. Sua transformação digital começa aqui.",
-      slug: "migracao-nuvem"
-    },
-    {
-      icon: Code,
-      title: "Desenvolvimento de Software",
-      description: "Soluções sob medida com tecnologias modernas: React, Node.js, Python, .NET e mais. Arquitetura escalável, código limpo, testes automatizados e entrega contínua. Do MVP ao produto consolidado, transformamos ideias em realidade.",
-      slug: "desenvolvimento-software"
-    },
-    {
-      icon: TrendingUp,
-      title: "Engenharia e Ciência de Dados",
-      description: "Pipelines robustos de dados, data lakes, data warehouses e análises avançadas. Machine learning, IA e visualização de dados para insights estratégicos. Transforme dados brutos em vantagem competitiva real.",
-      slug: "engenharia-dados"
-    },
-    {
-      icon: Users,
-      title: "Alocação de Profissionais",
-      description: "Profissionais seniores e especializados para seu time: engenheiros de dados, desenvolvedores, arquitetos de solução e DBAs. Agilidade na contratação, expertise comprovada e fit cultural garantido.",
-      slug: "alocacao-profissionais"
-    },
-    {
       icon: Briefcase,
       title: "CTO as a Service / Squads",
-      description: "Liderança tecnológica estratégica sob demanda. Definição de roadmap, gestão de arquitetura, governança de TI e formação de times ágeis. Ou squads completos para acelerar seus projetos com autonomia e qualidade.",
-      slug: "cto-as-service"
+      description:
+        "Liderança tecnológica estratégica e times completos para acelerar sua transformação digital com governança.",
+      slug: "cto-as-service",
     },
     {
       icon: Lightbulb,
       title: "Transformação Digital",
-      description: "Modernização completa de processos e sistemas legados. Automação, digitalização de workflows, integração de sistemas e mudança cultural. Preparamos sua empresa para os desafios do mercado digital com segurança.",
-      slug: "transformacao-digital"
+      description:
+        "Modernização de processos e sistemas, preparando sua empresa para os desafios do mercado digital.",
+      slug: "transformacao-digital",
+    },
+    {
+      icon: Database,
+      title: "Administração de Bancos de Dados",
+      description:
+        "Gestão completa e otimização de bancos de dados, garantindo performance, segurança e disponibilidade para suas operações.",
+      slug: "administracao-bancos-dados",
+    },
+    {
+      icon: Cloud,
+      title: "Consultoria em Cloud Computing",
+      description:
+        "Estratégias personalizadas para migração e otimização de recursos na nuvem, reduzindo custos e aumentando escalabilidade.",
+      slug: "consultoria-cloud",
+    },
+    {
+      icon: Server,
+      title: "Migração para Nuvem",
+      description:
+        "Processo seguro e eficiente de migração de infraestrutura para ambientes cloud, minimizando riscos e tempo de inatividade.",
+      slug: "migracao-nuvem",
+    },
+    {
+      icon: Code,
+      title: "Desenvolvimento de Software",
+      description:
+        "Soluções sob medida com tecnologias modernas, entregando sistemas robustos, escaláveis e alinhados ao seu negócio.",
+      slug: "desenvolvimento-software",
+    },
+    {
+      icon: TrendingUp,
+      title: "Engenharia e Ciência de Dados (Big Data)",
+      description:
+        "Transforme dados em insights estratégicos com pipelines inteligentes, análises avançadas e machine learning.",
+      slug: "engenharia-dados",
+    },
+    {
+      icon: Brain,
+      title: "Engenharia de IA",
+      description:
+        "Desenvolvemos e integramos soluções de Inteligência Artificial sob medida — como assistentes virtuais, automações inteligentes e modelos preditivos — para otimizar processos, apoiar decisões e gerar novos produtos digitais baseados em dados.",
+      slug: "engenharia-ia",
     },
     {
       icon: FolderKanban,
-      title: "Gerência de Projetos de TI",
-      description: "Gestão ágil com metodologias Scrum e Kanban. PMO estruturado, acompanhamento de métricas, gestão de riscos e comunicação transparente. Entregas no prazo, dentro do orçamento e com a qualidade que seu negócio merece.",
-      slug: "gerencia-projetos"
-    }
+      title: "Consultor de  BPM",
+      description:
+        "Mapeamos, modelamos e otimizamos processos de negócio com BPM, eliminando gargalos e garantindo eficiência, padronização e visão de ponta a ponta.",
+      slug: "consultor-bpm",
+    },
   ];
 
   return (

@@ -10,7 +10,8 @@ import {
   Briefcase,
   Lightbulb,
   FolderKanban,
-  Server
+  Server,
+  Brain
 } from "lucide-react";
 
 const ServicesSection = () => {
@@ -59,26 +60,25 @@ const ServicesSection = () => {
     },
     {
       icon: TrendingUp,
-      title: "Engenharia e Ciência de Dados",
+      title: "Engenharia e Ciência de Dados (Big Data)",
       description:
         "Transforme dados em insights estratégicos com pipelines inteligentes, análises avançadas e machine learning.",
       slug: "engenharia-dados",
     },
-    // {
-    //   icon: Users,
-    //   title: "Alocação de Profissionais",
-    //   description:
-    //     "Profissionais qualificados e experientes para compor seu time, com agilidade e expertise técnica comprovada.",
-    //   slug: "alocacao-profissionais",
-    // },
-    
-    // {
-    //   icon: FolderKanban,
-    //   title: "Gerência de Projetos de TI",
-    //   description:
-    //     "Gestão ágil e eficiente de projetos tecnológicos, garantindo entregas no prazo com qualidade e transparência.",
-    //   slug: "gerencia-projetos",
-    // },
+    {
+      icon: Brain,
+      title: "Engenharia de IA",
+      description:
+        "Desenvolvemos e integramos soluções de Inteligência Artificial sob medida — como assistentes virtuais, automações inteligentes e modelos preditivos — para otimizar processos, apoiar decisões e gerar novos produtos digitais baseados em dados.",
+      slug: "engenharia-ia",
+    },
+    {
+      icon: FolderKanban,
+      title: "Consultor de  BPM",
+      description:
+        "Mapeamos, modelamos e otimizamos processos de negócio com BPM, eliminando gargalos e garantindo eficiência, padronização e visão de ponta a ponta.",
+      slug: "consultor-bpm",
+    },
   ];
 
   return (

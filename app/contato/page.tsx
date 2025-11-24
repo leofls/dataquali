@@ -14,17 +14,17 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    {
-      icon: Phone,
-      title: "Telefone",
-      content: "(11) 9999-9999",
-      action: "tel:+5511999999999"
-    },
+    // {
+    //   icon: Phone,
+    //   title: "Telefone",
+    //   content: "(11) 9999-9999",
+    //   action: "tel:+5511999999999"
+    // },
     {
       icon: Mail,
       title: "Email",
-      content: "contato@dataquali.com",
-      action: "mailto:contato@dataquali.com"
+      content: "contato@dataquali.com.br",
+      action: "mailto:contato@dataquali.com.br"
     },
     {
       icon: MessageCircle,
@@ -35,7 +35,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Localização",
-      content: "São Paulo, SP - Brasil",
+      content: "Maceió, AL - Brasil",
       action: "#"
     }
   ];
@@ -62,7 +62,7 @@ const Contact = () => {
       {/* Contact Info Cards */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <Card key={index} className="bg-card border-border hover:border-primary smooth-transition group">
                 <CardContent className="p-6 text-center space-y-4">

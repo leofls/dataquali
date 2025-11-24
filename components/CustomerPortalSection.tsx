@@ -60,7 +60,7 @@ const CustomerPortalSection = () => {
                 size="lg"
                 className="bg-primary hover:bg-accent glow-effect"
                 onClick={() =>
-                  window.open("https://suporte.empresa.com", "_blank")
+                  window.open("https://itsm.dataquali.com.br:9443/glpi/", "_blank")
                 }
               >
                 <Ticket className="mr-2 h-5 w-5" />

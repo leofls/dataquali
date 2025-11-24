@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Briefcase, Users, TrendingUp, Heart } from "lucide-react";
+import Link from "next/link";
+import { jobs, getAllJobs } from "@/lib/jobs";
 
 const Professionals = () => {
   const benefits = [
@@ -30,6 +32,14 @@ const Professionals = () => {
       description: "Pacote de benefícios atrativo, bônus por performance e reconhecimento do seu valor."
     }
   ];
+
+  const jobPositions = getAllJobs().map((j) => ({
+    id: j.slug,
+    title: j.title,
+    location: j.location,
+    type: j.type,
+    url: `/profissionais/${j.slug}`,
+  }));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -92,12 +102,7 @@ const Professionals = () => {
           </div>
 
           <div className="max-w-4xl mx-auto space-y-4">
-            {[
-              { title: "Engenheiro de Dados Sênior", location: "Remoto", type: "Full-time" },
-              { title: "Desenvolvedor Full Stack", location: "São Paulo", type: "Full-time" },
-              { title: "Arquiteto de Soluções Cloud", location: "Remoto", type: "Full-time" },
-              { title: "DBA PostgreSQL", location: "Híbrido", type: "Full-time" }
-            ].map((job, index) => (
+            {jobPositions.map((job, index) => (
               <Card key={index} className="bg-background border-border hover:border-primary smooth-transition">
                 <CardContent className="p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <div>
@@ -106,9 +111,11 @@ const Professionals = () => {
                       {job.location} • {job.type}
                     </p>
                   </div>
-                  <Button className="bg-primary hover:bg-accent">
-                    Ver Detalhes
-                  </Button>
+                  <Link href={job.url}>
+                    <Button className="bg-primary hover:bg-accent">
+                      Ver Detalhes
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
