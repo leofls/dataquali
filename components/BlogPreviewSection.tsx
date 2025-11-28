@@ -28,7 +28,7 @@ const BlogPreviewSection = () => {
       excerpt: "Entenda como a liderança tecnológica sob demanda pode acelerar a transformação digital do seu negócio.",
       date: "05 Jan 2024",
       category: "Insights",
-      slug: "cto-as-service",
+      slug: "migracao-cloud-guia",
       image: "/assets/blog-3.jpg"
     }
   ];

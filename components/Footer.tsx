@@ -43,8 +43,8 @@ const Footer = () => {
 
   const logoSrc =
     theme === "light"
-      ? "/Dataquali_preto_Azul_sem_slogan.png"
-      : "/Dataquali_BRANCO_Azul_sem_slogan.png";
+      ? "/DATA QUALI.png"
+      : "/DATA QUALI.png"
 
   return (
     <footer className="bg-card border-t border-border relative">
@@ -55,7 +55,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-2xl font-bold gradient-text">
               <Image
-                className="w-1/2"
+                className="w-1/2 filter drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)]"
                 src={logoSrc}
                 width={200}
                 height={80}
@@ -64,8 +64,8 @@ const Footer = () => {
                   const img = e.currentTarget as HTMLImageElement;
                   img.src =
                     theme === "light"
-                      ? "/Dataquali - Logo.png"
-                      : "/Dataquali_BRANCO_Tom_Azul.png";
+                      ? "/DATA QUALI.png"
+                      : "/DATA QUALI.png"
                 }}
               />
             </h3>

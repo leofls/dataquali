@@ -89,17 +89,17 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2 ">
             <Image
               src={
                 theme === "light"
-                  ? "/Dataquali_preto_Azul_sem_slogan.png"
-                  : "/Dataquali_BRANCO_Azul_sem_slogan.png"
+                  ? "/NOME-AZUL.png"
+                  : "/NOME-BRANCO.png"
               }
               alt="Dataquali"
-              width={150}
-              height={40}
-              className="h-12 w-auto"
+              width={100}
+              height={30}
+              className="h-6 w-auto filter drop-shadow-[0_5px_10px_rgba(0,0,0,0.5)]"
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
                 img.src =
@@ -128,8 +128,10 @@ export default function Navbar() {
 
             <ThemeToggle />
 
-            <Button className="bg-primary hover:bg-accent smooth-transition">
-              Fale com um Especialista
+            <Button className="bg-primary hover:bg-accent smooth-transition"
+              onClick={() => window.open("https://itsm.dataquali.com.br:9443/glpi/", "_blank")}
+            >
+              Abrir ticket
             </Button>
           </div>
 
@@ -163,8 +165,10 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <Button className="w-full bg-primary hover:bg-accent">
-              Fale com um Especialista
+            <Button className="w-full bg-primary hover:bg-accent"
+              onClick={() => window.open("https://itsm.dataquali.com.br:9443/glpi/", "_blank")}
+            >
+              Abrir ticket
             </Button>
           </div>
         )}

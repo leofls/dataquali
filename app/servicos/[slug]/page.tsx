@@ -25,10 +25,12 @@ const services: Record<string, any> = {
     title: "Administração de Bancos de Dados",
     description:
       "Gestão completa e otimização de bancos de dados, garantindo performance, segurança e disponibilidade para suas operações.",
-    longDescription:
-      `Fazemos a gestão completa e a otimização de bancos de dados, garantindo performance, segurança e alta disponibilidade para suas operações críticas. Atuamos de forma preventiva para evitar paradas e incidentes.
-      Nossa equipe especializada oferece administração de ponta a ponta, desde instalação e configuração até monitoramento contínuo e tuning de performance. Trabalhamos para que seus dados estejam sempre disponíveis, protegidos e operando com máxima eficiência e menor custo possível.
-      `,
+    longDescription:(<span>
+        <strong>
+          Fazemos a gestão completa e a otimização de bancos de dados, garantindo performance, segurança e alta disponibilidade para suas operações críticas. Atuamos de forma preventiva para evitar paradas e incidentes.
+        </strong> <br />
+        Nossa equipe especializada oferece administração de ponta a ponta, desde instalação e configuração até monitoramento contínuo e tuning de performance. Trabalhamos para que seus dados estejam sempre disponíveis, protegidos e operando com máxima eficiência e menor custo possível.
+      </span>),
     benefits: [
       "Monitoramento 24/7 de performance, disponibilidade e alertas proativos",
       "Backup automatizado e planos de recuperação de desastres testados periodicamente",
@@ -56,10 +58,11 @@ const services: Record<string, any> = {
     title: "Consultoria em Cloud Computing",
     description:
       "Estratégias personalizadas para migração e otimização de recursos na nuvem, reduzindo custos e aumentando escalabilidade.",
-    longDescription:
-      `Ajudamos sua empresa a tomar decisões estratégicas em nuvem, escolhendo arquiteturas, serviços e provedores que façam sentido para o seu negócio. Trabalhamos de forma vendor-neutral, sempre em defesa dos seus interesses.
-      Realizamos diagnósticos, desenhamos arquiteturas e definimos padrões de segurança, operação e governança em cloud. Nosso objetivo é garantir ambientes escaláveis, seguros e financeiramente otimizados, com um roadmap claro de evolução.
-      `,
+    longDescription:(<span>
+        <strong>Ajudamos a tomar decisões estratégicas em nuvem, escolhendo arquiteturas, serviços e provedores que façam sentido para o seu negócio. Trabalhamos de forma vendor-neutral, sempre em defesa dos seus interesses.</strong>
+        <br />
+        Realizamos diagnósticos, desenhamos arquiteturas e definimos padrões de segurança, operação e governança em cloud. Nosso objetivo é garantir ambientes escaláveis, seguros e financeiramente otimizados, com um roadmap claro de evolução.
+    </span>),
     benefits: [
       "Desenho de arquitetura de nuvem sob medida (single, multi ou hybrid cloud)",
       "Análise de custos, dimensionamento correto de recursos e plano de otimização financeira",
@@ -87,10 +90,12 @@ const services: Record<string, any> = {
     title: "Migração para Nuvem",
     description:
       "Processo seguro e eficiente de migração de infraestrutura para ambientes cloud, minimizando riscos e tempo de inatividade.",
-    longDescription:
-      `Planejamos e executamos migrações de ambientes on-premises ou entre provedores de nuvem com foco em previsibilidade, segurança e mínimo impacto ao negócio. Cada etapa é desenhada para reduzir riscos e evitar surpresas.
+    longDescription:(<span>
+      Planejamos e executamos migrações de ambientes on-premises ou entre provedores de nuvem com foco em previsibilidade, segurança e mínimo impacto ao negócio. Cada etapa é desenhada para reduzir riscos e evitar surpresas.
+      <strong>Processo seguro e eficiente de migração de infraestrutura para ambientes cloud, minimizando riscos e tempo de inatividade.</strong>
+      <br />
       Realizamos assessments, definimos estratégias de migração por ondas e executamos provas de conceito antes do corte definitivo. Acompanhamos o pós-go-live para estabilizar o ambiente, ajustar performance e transferir conhecimento à sua equipe.
-      `,
+    </span>),
     benefits: [
       "Assessment completo dos sistemas atuais, riscos e dependências antes da migração",
       "Desenho de estratégia por ondas/fases, priorizando serviços críticos e “quick wins”",
@@ -118,10 +123,11 @@ const services: Record<string, any> = {
     title: "Desenvolvimento de Software",
     description:
       "Soluções sob medida com tecnologias modernas, entregando sistemas robustos, escaláveis e alinhados ao seu negócio.",
-    longDescription:
-      `Desenvolvemos soluções sob medida, alinhadas às estratégias do negócio, utilizando tecnologias modernas, APIs e integrações. O foco é entregar software que resolva problemas reais e possa evoluir com a empresa.
+    longDescription: (<span>
+      <strong>Desenvolvemos soluções sob medida, alinhadas às estratégias do negócio, utilizando tecnologias modernas, APIs e integrações. O foco é entregar software que resolva problemas reais e possa evoluir com a empresa.</strong>
+      <br />
       Atuamos desde a concepção e arquitetura até a implantação e suporte evolutivo, com ciclos ágeis de entrega e comunicação transparente. Criamos aplicações robustas, escaláveis e preparadas para integrações futuras e automações.
-      `,
+    </span>),
     benefits: [
       "Levantamento de requisitos com foco em jornadas, processos e objetivos de negócio",
       "Arquitetura de software escalável, segura e preparada para integrações futuras",
@@ -146,13 +152,15 @@ const services: Record<string, any> = {
   },
   "engenharia-dados": {
     icon: TrendingUp,
-    title: "Engenharia e Ciência de Dados",
+    title: "Engenharia e Ciência de Dados (Big Data)",
     description:
       "Transforme dados em insights estratégicos com pipelines inteligentes, análises avançadas e machine learning.",
     longDescription:
-      `Transformamos grandes volumes de dados em informação útil para decisões estratégicas, operacionais e táticas. Construímos a base técnica para analytics, relatórios e modelos preditivos de forma consistente e escalável.
-      Nossa atuação cobre todo o ciclo de dados: ingestão, tratamento, armazenamento, modelagem, visualização e governança. Entregamos pipelines confiáveis, modelos analíticos e indicadores que suportam uma gestão verdadeiramente orientada a dados.
-      `,
+      (<span>
+        <strong>Transformamos dados em insights para decisões estratégicas, operacionais e táticas. Construímos a base técnica para analytics, relatórios e modelos preditivos de forma consistente e escalável.</strong><br />
+        Nossa atuação cobre todo o ciclo de dados: ingestão, tratamento, armazenamento, modelagem, visualização e governança. Entregamos pipelines confiáveis, modelos analíticos e indicadores que suportam uma gestão verdadeiramente orientada a dados.
+        
+      </span>),
     benefits: [
       "Arquitetura de dados moderna (data lake, lakehouse ou data warehouse) alinhada ao negócio",
       "Pipelines de ingestão e tratamento de dados em escala, com monitoramento e versionamento",
@@ -180,10 +188,10 @@ const services: Record<string, any> = {
     title: "Engenharia de IA",
     description:
       "Profissionais qualificados e experientes para compor seu time, com agilidade e expertise técnica comprovada.",
-    longDescription:
-      `Desenhamos e implementamos soluções de Inteligência Artificial que geram valor real, desde automações com modelos de linguagem até sistemas preditivos e assistentes inteligentes integrados aos seus canais e sistemas.
-      Trabalhamos desde a definição dos casos de uso até a implementação, monitoramento e governança dos modelos. Integramos IA aos seus dados e aplicações, garantindo segurança, contexto adequado e alinhamento às diretrizes do negócio.
-      `,
+    longDescription:(<span>
+        <strong>Desenhamos e implementamos soluções de Inteligência Artificial que geram valor real, desde automações com modelos de linguagem até sistemas preditivos e assistentes inteligentes integrados aos seus canais e sistemas.</strong> <br />
+        Trabalhamos desde a definição dos casos de uso até a implementação, monitoramento e governança dos modelos. Integramos IA aos seus dados e aplicações, garantindo segurança, contexto adequado e alinhamento às diretrizes do negócio.
+      </span>),
     benefits: [
       "Identificação e priorização de casos de uso de IA com retorno concreto para o negócio",
       "Seleção de modelos, plataformas e arquitetura de IA alinhadas à sua realidade técnica",
@@ -212,8 +220,11 @@ const services: Record<string, any> = {
     description:
       "Liderança tecnológica estratégica e times completos para acelerar sua transformação digital com governança.",
     longDescription:
-      `Assumimos a direção técnica do seu negócio como um “CTO sob demanda”, alinhando tecnologia à estratégia da empresa sem conflito de interesses. Atuamos como ponte entre gestão e times técnicos, traduzindo objetivos de negócio em planos claros de arquitetura, projetos, integrações e priorização de investimentos.
-      Nossa atuação é contínua e consultiva: desenhamos o roadmap de tecnologia, orquestramos fornecedores e squads, reduzimos riscos e garantimos que cada decisão tecnológica gere retorno concreto, não apenas mais sistemas para manter.`,
+      (<span>
+        Assumimos a direção técnica do seu negócio como um “CTO sob demanda”, alinhando tecnologia à estratégia da empresa sem conflito de interesses. 
+        <strong>Atuamos como ponte entre gestão e times técnicos, traduzindo objetivos de negócio em planos claros de arquitetura, projetos, integrações e priorização de investimentos.</strong> <br />
+        Nossa atuação é contínua e consultiva: desenhamos o roadmap de tecnologia, orquestramos fornecedores e squads, reduzimos riscos e garantimos que cada decisão tecnológica gere retorno concreto, não apenas mais sistemas para manter.
+      </span>),
     benefits: [
       "Visão estratégica de tecnologia alinhada ao plano de negócios e aos objetivos de crescimento da empresa",
       "Orquestração de fornecedores, times internos e parceiros, com visão independente e vendor-neutral",
@@ -234,45 +245,51 @@ const services: Record<string, any> = {
           "Atuamos com CTO sob demanda para um escritório em expansão, definindo arquitetura, segurança e integração entre sistemas jurídicos e financeiro, o que reduziu o tempo de abertura de novos casos em 40% e dobrou a capacidade de atendimento sem aumentar o time."
       }
     ],
-    clients: ["Ecommerce Plus", "PayTech", "Digital Bank"]
+    clients: []
   },
   "transformacao-digital": {
     icon: Lightbulb,
     title: "Transformação Digital",
     description:
       "Modernização de processos e sistemas, preparando sua empresa para os desafios do mercado digital.",
-    longDescription:
-      "Conduzimos processos completos de transformação digital, da estratégia à execução. Modernizamos processos, sistemas e cultura, preparando sua empresa para o futuro.",
+    longDescription:(<span>
+      <strong> Ajudamos sua empresa a sair do modelo operacional manual e fragmentado para um ambiente digital integrado, automatizado e orientado a dados. Atuamos desde o diagnóstico da maturidade digital até a implementação do plano de ação</strong>, conectando sistemas, redesenhando processos e introduzindo ferramentas que realmente façam diferença no dia a dia.
+      <br />
+      Nosso foco é simplificar, automatizar e dar visibilidade: menos retrabalho, menos planilha solta, mais fluxo contínuo, decisão com base em dados e experiência melhor para clientes e equipe.
+    </span>),
     benefits: [
-      "Diagnóstico completo da maturidade digital",
-      "Roadmap de transformação personalizado",
-      "Modernização de processos e sistemas",
-      "Change management e cultura digital",
-      "Métricas e KPIs de transformação"
+      "Diagnóstico da maturidade digital e mapa claro de priorização (o que fazer primeiro, depois e o que não fazer)",
+      "Automação de processos críticos para reduzir tarefas manuais, erros operacionais e dependência de pessoas-chave",
+      "Integração entre sistemas (ERP, CRM, financeiro, atendimento, BI, etc.) para eliminar retrabalho e duplicidade de dados",
+      "Criação de indicadores e painéis (dashboards) para gestão em tempo real e decisões baseadas em dados",
+      "Melhoria da experiência do cliente com jornadas mais simples, rápidas e digitais (onboarding, contratos, suporte, cobrança etc.)",
+      "Redução de custos operacionais e aumento de produtividade por meio de padronização, automação e uso inteligente de tecnologia",
+
     ],
     examples: [
       {
-        title: "Indústria Tradicional",
+        title: "Empresa Tradicional de Serviços",
         description:
-          "Digitalizamos processos de chão de fábrica, implementando IoT e analytics, reduzindo custos em 25%."
+          " Lideramos a transformação digital de uma empresa que operava com processos 100% manuais, integrando sistemas, digitalizando fluxos de aprovação e automatizando rotinas. O tempo de execução de processos internos caiu em 50% e a empresa ganhou rastreabilidade de ponta a ponta."
       },
       {
         title: "Rede de Franquias",
         description:
-          "Transformação digital completa com novo ERP, e-commerce e app mobile, unificando operações de 50+ unidades."
+          "Desenhamos e implementamos uma jornada digital para franqueados e clientes, unificando CRM, suporte, marketing e financeiro. O resultado foi aumento de 28% na taxa de conversão de leads e redução de 40% no tempo de onboarding de novos franqueados."
       }
     ],
-    clients: ["Indústria Brasil", "Franquia Nacional", "Logística SA"]
+    clients: []
   },
   "consultor-bpm": {
     icon: FolderKanban,
     title: "Consultor de BPM (Análise de Processos)",
     description:
       "Gestão ágil e eficiente de projetos tecnológicos, garantindo entregas no prazo com qualidade e transparência.",
-    longDescription:
-      `Mapeamos, modelamos e otimizamos processos de negócio com foco em eficiência, padronização e clareza de responsabilidades. Conectamos processos, sistemas e pessoas para reduzir retrabalho e aumentar a previsibilidade das entregas.
+    longDescription:(<span>
+      <strong>Mapeamos, modelamos e otimizamos processos de negócio com foco em eficiência, padronização e clareza de responsabilidades. Conectamos processos, sistemas e pessoas para reduzir retrabalho e aumentar a previsibilidade das entregas.</strong>
+      <br />
       Além dos desenhos em BPMN, criamos e implementamos os fluxos e telas em plataformas BPMS, traduzindo o modelo em processos executáveis. Ajudamos sua organização a sair do papel e operar seus processos de forma digital, medida e auditável.
-      `,
+    </span>),
     benefits: [
       "Mapeamento “as is” dos processos atuais, identificando gargalos, riscos e retrabalhos",
       "Desenho do modelo “to be” com fluxos otimizados, papéis claros e pontos de controle",
@@ -377,7 +394,7 @@ export default async function ServiceDetail({ params }: { params: Params | Promi
       </section>
 
       {/* Clients */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-card d-none">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h2 className="text-3xl font-bold">Alguns Clientes</h2>

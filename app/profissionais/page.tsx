@@ -166,6 +166,33 @@ const Professionals = () => {
                     />
                   </div>
 
+                    <div className="space-y-2">
+                    <label className="text-sm font-medium">Anexar Currículo</label>
+                    <Input
+                      type="file"
+                      accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf"
+                      className="bg-background"
+                      onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                      const file = e.target.files?.[0];
+                      if (!file) return;
+                      const allowedTypes = [
+                        "application/pdf",
+                        "application/msword",
+                        "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                      ];
+                      const allowedExts = [".doc", ".docx", ".pdf"];
+                      const isTypeAllowed = allowedTypes.includes(file.type);
+                      const isExtAllowed = allowedExts.some((ext) =>
+                        file.name.toLowerCase().endsWith(ext)
+                      );
+                      if (!isTypeAllowed && !isExtAllowed) {
+                        alert("Apenas arquivos .doc, .docx ou .pdf são permitidos.");
+                        e.target.value = "";
+                      }
+                      }}
+                    />
+                    </div>
+
                   <Button type="submit" className="w-full bg-primary hover:bg-accent">
                     Enviar Candidatura
                   </Button>

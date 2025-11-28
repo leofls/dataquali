@@ -10,63 +10,63 @@ const Services = () => {
       icon: Briefcase,
       title: "CTO as a Service / Squads",
       description:
-        "Liderança tecnológica estratégica e times completos para acelerar sua transformação digital com governança.",
+        "Atuamos como ponte entre gestão e times técnicos, traduzindo objetivos de negócio em planos claros de arquitetura, projetos, integrações e priorização de investimentos.",
       slug: "cto-as-service",
     },
     {
       icon: Lightbulb,
       title: "Transformação Digital",
       description:
-        "Modernização de processos e sistemas, preparando sua empresa para os desafios do mercado digital.",
+        "Ajudamos sua empresa a sair do modelo operacional manual e fragmentado para um ambiente digital integrado, automatizado e orientado a dados. Atuamos desde o diagnóstico da maturidade digital até a implementação do plano de ação.",
       slug: "transformacao-digital",
     },
     {
       icon: Database,
       title: "Administração de Bancos de Dados",
       description:
-        "Gestão completa e otimização de bancos de dados, garantindo performance, segurança e disponibilidade para suas operações.",
+        "Fazemos a gestão completa e a otimização de bancos de dados, garantindo performance, segurança e alta disponibilidade para suas operações críticas. Atuamos de forma preventiva para evitar paradas e incidentes.",
       slug: "administracao-bancos-dados",
     },
     {
       icon: Cloud,
       title: "Consultoria em Cloud Computing",
       description:
-        "Estratégias personalizadas para migração e otimização de recursos na nuvem, reduzindo custos e aumentando escalabilidade.",
+        "Ajudamos a tomar decisões estratégicas em nuvem, escolhendo arquiteturas, serviços e provedores que façam sentido para o seu negócio. Trabalhamos de forma vendor-neutral, sempre em defesa dos seus interesses.",
       slug: "consultoria-cloud",
     },
     {
       icon: Server,
       title: "Migração para Nuvem",
       description:
-        "Processo seguro e eficiente de migração de infraestrutura para ambientes cloud, minimizando riscos e tempo de inatividade.",
+        "Ajudamos sua empresa a sair do modelo operacional manual e fragmentado para um ambiente digital integrado, automatizado e orientado a dados. Atuamos desde o diagnóstico da maturidade digital até a implementação do plano de ação.",
       slug: "migracao-nuvem",
     },
     {
       icon: Code,
       title: "Desenvolvimento de Software",
       description:
-        "Soluções sob medida com tecnologias modernas, entregando sistemas robustos, escaláveis e alinhados ao seu negócio.",
+        "Desenvolvemos soluções sob medida, alinhadas às estratégias do negócio, utilizando tecnologias modernas, APIs e integrações. O foco é entregar software que resolva problemas reais e possa evoluir com a empresa.",
       slug: "desenvolvimento-software",
     },
     {
       icon: TrendingUp,
       title: "Engenharia e Ciência de Dados (Big Data)",
       description:
-        "Transforme dados em insights estratégicos com pipelines inteligentes, análises avançadas e machine learning.",
+        "Transformamos dados em insights para decisões estratégicas, operacionais e táticas. Construímos a base técnica para analytics, relatórios e modelos preditivos de forma consistente e escalável.",
       slug: "engenharia-dados",
     },
     {
       icon: Brain,
       title: "Engenharia de IA",
       description:
-        "Desenvolvemos e integramos soluções de Inteligência Artificial sob medida — como assistentes virtuais, automações inteligentes e modelos preditivos — para otimizar processos, apoiar decisões e gerar novos produtos digitais baseados em dados.",
+        "Desenhamos e implementamos soluções de Inteligência Artificial que geram valor real, desde automações com modelos de linguagem até sistemas preditivos e assistentes inteligentes integrados aos seus canais e sistemas.",
       slug: "engenharia-ia",
     },
     {
       icon: FolderKanban,
       title: "Consultor de  BPM",
       description:
-        "Mapeamos, modelamos e otimizamos processos de negócio com BPM, eliminando gargalos e garantindo eficiência, padronização e visão de ponta a ponta.",
+        "Mapeamos, modelamos e otimizamos processos de negócio com foco em eficiência, padronização e clareza de responsabilidades. Conectamos processos, sistemas e pessoas para reduzir retrabalho e aumentar a previsibilidade das entregas.",
       slug: "consultor-bpm",
     },
   ];

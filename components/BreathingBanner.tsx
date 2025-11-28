@@ -41,7 +41,7 @@ const BreathingBanner = () => {
           <h2 className="text-3xl md:text-5xl font-bold leading-tight">
             Transformamos{" "}
             <span className="gradient-text">desafios complexos</span>  
-            em soluções simples
+            {" "}em soluções simples
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">

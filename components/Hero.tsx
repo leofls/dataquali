@@ -23,7 +23,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="hero relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Carousel with Overlay */}
       <div className="absolute inset-0 z-0">
         <Carousel
@@ -51,11 +51,18 @@ const Hero = () => {
           <CarouselPrevious className="left-4 z-10" />
           <CarouselNext className="right-4 z-10" />
         </Carousel>
-        <div className="absolute z-8 inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
+        <div className="lente absolute z-8 inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 z-10 text-center space-y-8 py-32">
+        <Image 
+          src="/DQ-COR.png"
+          alt="Dataquali Logo"
+          width={200}
+          height={80}
+          className="mx-auto mb-4 animate-fade-in filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.5)]"
+        />
         <h1 className="text-4xl md:text-6xl font-bold leading-tight animate-fade-in">
           Tecnologia feita por pessoas,<br />
           <span className="gradient-text">para transformar negócios</span>

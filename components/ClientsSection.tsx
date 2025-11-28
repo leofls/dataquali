@@ -53,7 +53,7 @@ const ClientsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-secondary/30">
+    <section className="clients py-24 bg-gradient-to-b from-background to-secondary/30">
       <div className="container mx-auto px-4">
 
         {/* Cabeçalho */}
@@ -74,7 +74,7 @@ const ClientsSection = () => {
 
         {/* Grid de clientes */}
         <motion.div 
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 mb-12"
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4 mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -87,7 +87,7 @@ const ClientsSection = () => {
           {clients.map((client, index) => (
             <motion.div
               key={index}
-              className="flex items-center justify-center p-4 bg-card border border-border rounded-lg 
+              className="flex items-center justify-center px-6 py-12 bg-card border border-border rounded-lg 
               hover:border-primary hover:scale-105 group smooth-transition cursor-pointer"
               variants={{
                 hidden: { opacity: 0, scale: 0.9 },
@@ -98,10 +98,13 @@ const ClientsSection = () => {
                   window.open(client.url, "_blank");
                 }
               }}  
+              title={client.name}
             >
               <span className="text-2xl font-bold text-muted-foreground group-hover:text-primary transition-colors">
                 {typeof client.logo === "string" && client.logo.startsWith("/") ? (
-                  <Image src={client.logo} alt={client.name} width={80} height={40} />
+                  <Image src={client.logo} alt={client.name} width={180} height={110} 
+                    className="max-h-20 object-contain"
+                  />
                 ) : (
                   client.logo
                 )}

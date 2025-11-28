@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const Blog = () => {
@@ -9,6 +10,7 @@ const Blog = () => {
   
   const posts = [
     {
+      slug: "ia-analise-dados",
       title: "Como a IA está transformando a análise de dados empresariais",
       excerpt: "Descubra as últimas tendências em inteligência artificial aplicada a dados corporativos e como sua empresa pode se beneficiar.",
       category: "IA",
@@ -16,6 +18,7 @@ const Blog = () => {
       readTime: "5 min"
     },
     {
+      slug: "migracao-cloud-guia",
       title: "Migração para Cloud: Um guia completo para empresas",
       excerpt: "Tudo o que você precisa saber antes de migrar sua infraestrutura para a nuvem, desde planejamento até execução.",
       category: "Cloud",
@@ -23,6 +26,7 @@ const Blog = () => {
       readTime: "8 min"
     },
     {
+      slug: "case-reducao-custos",
       title: "Case de Sucesso: Redução de 60% em custos de infraestrutura",
       excerpt: "Como ajudamos uma empresa de e-commerce a otimizar sua arquitetura cloud e reduzir drasticamente custos operacionais.",
       category: "Cases",
@@ -30,6 +34,7 @@ const Blog = () => {
       readTime: "6 min"
     },
     {
+      slug: "desenvolvimento-agil",
       title: "Desenvolvimento Ágil: Melhores práticas para times distribuídos",
       excerpt: "Metodologias e ferramentas essenciais para manter a produtividade e qualidade com equipes remotas.",
       category: "Software",
@@ -37,6 +42,7 @@ const Blog = () => {
       readTime: "7 min"
     },
     {
+      slug: "cto-as-a-service",
       title: "O papel estratégico do CTO as a Service na transformação digital",
       excerpt: "Entenda como a liderança tecnológica sob demanda pode acelerar a inovação sem comprometer o orçamento.",
       category: "Insights",
@@ -44,6 +50,7 @@ const Blog = () => {
       readTime: "4 min"
     },
     {
+      slug: "data-lake-vs-data-warehouse",
       title: "Data Lake vs Data Warehouse: Qual escolher?",
       excerpt: "Análise comparativa das duas principais arquiteturas de armazenamento de dados e quando usar cada uma.",
       category: "Cloud",
@@ -109,7 +116,7 @@ const Blog = () => {
                   </div>
                   
                   <h3 className="text-xl font-semibold group-hover:text-primary smooth-transition">
-                    {post.title}
+                    <Link href={`/blog/${post.slug}`} className="block">{post.title}</Link>
                   </h3>
                   
                   <p className="text-muted-foreground text-sm leading-relaxed">
@@ -118,10 +125,10 @@ const Blog = () => {
                   
                   <div className="flex items-center justify-between pt-4 border-t border-border">
                     <span className="text-sm text-muted-foreground">{post.readTime} de leitura</span>
-                    <Button variant="ghost" className="text-primary p-0 hover:bg-transparent group">
+                    <Link href={`/blog/${post.slug}`} className="text-primary p-0 hover:bg-transparent group inline-flex items-center">
                       Ler mais
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 smooth-transition" />
-                    </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

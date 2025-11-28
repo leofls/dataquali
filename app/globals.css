@@ -105,4 +105,16 @@ All colors MUST be HSL.
   .smooth-transition {
     transition: var(--transition-smooth);
   }
+  .light .clients .bg-card {
+    background-color: hsl(0 0% 85% / 1);
+  }
+  .light .hero .lente {
+    --background: 0 0% 15%;
+    --foreground: 0 0% 100%;
+  }
+  .light .hero,
+   .light nav{
+    --muted: 0 0% 11%;
+    --muted-foreground: 0 0% 65%;
+  }
 }
